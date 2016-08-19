@@ -29,82 +29,82 @@ object GameState {
     isSupplyCenter: Boolean
   )
 
-  val provinces = Set(
-    Province("Switzerland", Set("swi", "switz"), "swi", ProvinceType.Swiss, false),
-    Province("Adriatic Sea", Set("adr", "adriatic"), "adr", ProvinceType.Sea, false),
-    Province("Aegean Sea", Set("aeg", "aegean"), "aeg", ProvinceType.Sea, false),
-    Province("Albania", Set("l alb"), "alb", ProvinceType.Land, false),
-    Province("Ankara", Set("T ank"), "ank", ProvinceType.Land, true),
-    Province("Apulia", Set("l apu"), "apu", ProvinceType.Land, false),
-    Province("Armenia", Set("l arm"), "arm", ProvinceType.Land, false),
-    Province("Baltic Sea", Set("w bal baltic"), "bal", ProvinceType.Sea, false),
-    Province("Barents Sea", Set("w bar barents"), "bar", ProvinceType.Sea, false),
-    Province("Belgium", Set("x bel"), "bel", ProvinceType.Land, true),
-    Province("Berlin", Set("G ber"), "ber", ProvinceType.Land, true),
-    Province("Black Sea", Set("w bla black"), "bla", ProvinceType.Sea, false),
-    Province("Bohemia", Set("l boh"), "boh", ProvinceType.Land, false),
-    Province("Brest", Set("F bre"), "bre", ProvinceType.Land, true),
-    Province("Budapest", Set("A bud"), "bud", ProvinceType.Land, true),
-    Province("Bulgaria", Set("x bul"), "bul", ProvinceType.Land, true),
-    Province("Burgundy", Set("l bur"), "bur", ProvinceType.Land, false),
-    Province("Clyde", Set("l cly"), "cly", ProvinceType.Land, false),
-    Province("Constantinople", Set("T con"), "con", ProvinceType.Land, true),
-    Province("Denmark", Set("x den"), "den", ProvinceType.Land, true),
-    Province("Eastern Mediterranean", Set("w eas emed east eastern eastmed ems eme"), "eas", ProvinceType.Sea, false),
-    Province("Edinburgh", Set("E edi"), "edi", ProvinceType.Land, true),
-    Province("English Channel", Set("w eng english channel ech"), "eng", ProvinceType.Sea, false),
-    Province("Finland", Set("l fin"), "fin", ProvinceType.Land, false),
-    Province("Galicia", Set("l gal"), "gal", ProvinceType.Land, false),
-    Province("Gascony", Set("l gas"), "gas", ProvinceType.Land, false),
-    Province("Greece", Set("x gre"), "gre", ProvinceType.Land, true),
-    Province("Gulf of Lyon", Set("w lyo gol gulfofl lyon"), "lyo", ProvinceType.Sea, false),
-    Province("Gulf of Bothnia", Set("w bot gob both gulfofb bothnia"), "bot", ProvinceType.Sea, false),
-    Province("Helgoland Bight", Set("w hel helgoland"), "hel", ProvinceType.Sea, false),
-    Province("Holland", Set("x hol"), "hol", ProvinceType.Land, true),
-    Province("Ionian Sea", Set("w ion ionian"), "ion", ProvinceType.Sea, false),
-    Province("Irish Sea", Set("w iri irish"), "iri", ProvinceType.Sea, false),
-    Province("Kiel", Set("G kie"), "kie", ProvinceType.Land, true),
-    Province("Liverpool", Set("E lvp livp lpl"), "lvp", ProvinceType.Land, true),
-    Province("Livonia", Set("l lvn livo lvo lva"), "lvn", ProvinceType.Land, false),
-    Province("London", Set("E lon"), "lon", ProvinceType.Land, true),
-    Province("Marseilles", Set("F mar mars"), "mar", ProvinceType.Land, true),
-    Province("Mid-Atlantic Ocean", Set("w mao midatlanticocean midatlantic mid mat"), "mao", ProvinceType.Sea, false),
-    Province("Moscow", Set("R mos"), "mos", ProvinceType.Land, true),
-    Province("Munich", Set("G mun"), "mun", ProvinceType.Land, true),
-    Province("Naples", Set("I nap"), "nap", ProvinceType.Land, true),
-    Province("North Atlantic Ocean", Set("w nao nat"), "nao", ProvinceType.Sea, false),
-    Province("North Africa", Set("l naf nora"), "naf", ProvinceType.Land, false),
-    Province("North Sea", Set("w nth norsea nts"), "nth", ProvinceType.Sea, false),
-    Province("Norway", Set("x nor nwy norw"), "nor", ProvinceType.Land, true),
-    Province("Norwegian Sea", Set("w nwg norwsea nrg norwegian"), "nwg", ProvinceType.Sea, false),
-    Province("Paris", Set("F par"), "par", ProvinceType.Land, true),
-    Province("Picardy", Set("l pic"), "pic", ProvinceType.Land, false),
-    Province("Piedmont", Set("l pie"), "pie", ProvinceType.Land, false),
-    Province("Portugal", Set("x por"), "por", ProvinceType.Land, true),
-    Province("Prussia", Set("l pru"), "pru", ProvinceType.Land, false),
-    Province("Rome", Set("I rom"), "rom", ProvinceType.Land, true),
-    Province("Ruhr", Set("l ruh"), "ruh", ProvinceType.Land, false),
-    Province("Rumania", Set("x rum"), "rum", ProvinceType.Land, true),
-    Province("Serbia", Set("x ser"), "ser", ProvinceType.Land, true),
-    Province("Sevastopol", Set("R sev sevastapol"), "sev", ProvinceType.Land, true),
-    Province("Silesia", Set("l sil"), "sil", ProvinceType.Land, false),
-    Province("Skagerrak", Set("w ska"), "ska", ProvinceType.Sea, false),
-    Province("Smyrna", Set("T smy"), "smy", ProvinceType.Land, true),
-    Province("Spain", Set("x spa"), "spa", ProvinceType.Land, true),
-    Province("St Petersburg", Set("R stp"), "stp", ProvinceType.Land, true),
-    Province("Sweden", Set("x swe"), "swe", ProvinceType.Land, true),
-    Province("Syria", Set("l syr"), "syr", ProvinceType.Land, false),
-    Province("Trieste", Set("A tri"), "tri", ProvinceType.Land, true),
-    Province("Tunis", Set("x tun"), "tun", ProvinceType.Land, true),
-    Province("Tuscany", Set("l tus"), "tus", ProvinceType.Land, false),
-    Province("Tyrolia", Set("l tyr tyl trl"), "tyr", ProvinceType.Land, false),
-    Province("Tyrrhenian Sea", Set("w tys tyrr tyrrhenian tyn tyh"), "tys", ProvinceType.Sea, false),
-    Province("Ukraine", Set("l ukr"), "ukr", ProvinceType.Land, false),
-    Province("Venice", Set("I ven"), "ven", ProvinceType.Land, true),
-    Province("Vienna", Set("A vie"), "vie", ProvinceType.Land, true),
-    Province("Wales", Set("l wal"), "wal", ProvinceType.Land, false),
-    Province("Warsaw", Set("R war"), "war", ProvinceType.Land, true),
-    Province("Western Mediterranean", Set("w wes wmed west western westmed wms wme"), "wes", ProvinceType.Sea, false),
-    Province("Yorkshire", Set("l yor york yonkers"), "yor", ProvinceType.Land, false)
-  )
+  object Province {
+    object Switzerland extends Province("Switzerland", Set("swi", "switz"), "swi", ProvinceType.Swiss, false)
+    object AdriaticSea extends Province("Adriatic Sea", Set("adr", "adriatic"), "adr", ProvinceType.Sea, false)
+    object AegeanSea extends Province("Aegean Sea", Set("aeg", "aegean"), "aeg", ProvinceType.Sea, false)
+    object Albania extends Province("Albania", Set("alb"), "alb", ProvinceType.Land, false)
+    object Ankara extends Province("Ankara", Set("ank"), "ank", ProvinceType.Land, true)
+    object Apulia extends Province("Apulia", Set("apu"), "apu", ProvinceType.Land, false)
+    object Armenia extends Province("Armenia", Set("arm"), "arm", ProvinceType.Land, false)
+    object BalticSea extends Province("Baltic Sea", Set("bal", "baltic"), "bal", ProvinceType.Sea, false)
+    object BarentsSea extends Province("Barents Sea", Set("w bar barents"), "bar", ProvinceType.Sea, false)
+    object Belgium extends Province("Belgium", Set("bel"), "bel", ProvinceType.Land, true)
+    object Berlin extends Province("Berlin", Set("ber"), "ber", ProvinceType.Land, true)
+    object BlackSea extends Province("Black Sea", Set("bla", "black"), "bla", ProvinceType.Sea, false)
+    object Bohemia extends Province("Bohemia", Set("boh"), "boh", ProvinceType.Land, false)
+    object Brest extends Province("Brest", Set("bre"), "bre", ProvinceType.Land, true)
+    object Budapest extends Province("Budapest", Set("bud"), "bud", ProvinceType.Land, true)
+    object Bulgaria extends Province("Bulgaria", Set("bul"), "bul", ProvinceType.Land, true)
+    object Burgundy extends Province("Burgundy", Set("bur"), "bur", ProvinceType.Land, false)
+    object Clyde extends Province("Clyde", Set("cly"), "cly", ProvinceType.Land, false)
+    object Constantinople extends Province("Constantinople", Set("con"), "con", ProvinceType.Land, true)
+    object Denmark extends Province("Denmark", Set("den"), "den", ProvinceType.Land, true)
+    object EasternMediterranean extends Province("Eastern Mediterranean", Set("eas", "emed", "east", "eastern", "eastmed", "ems", "eme"), "eas", ProvinceType.Sea, false)
+    object Edinburgh extends Province("Edinburgh", Set("edi"), "edi", ProvinceType.Land, true)
+    object EnglishChannel extends Province("English Channel", Set("eng", "english channel", "ech"), "eng", ProvinceType.Sea, false)
+    object Finland extends Province("Finland", Set("fin"), "fin", ProvinceType.Land, false)
+    object Galicia extends Province("Galicia", Set("gal"), "gal", ProvinceType.Land, false)
+    object Gascony extends Province("Gascony", Set("gas"), "gas", ProvinceType.Land, false)
+    object Greece extends Province("Greece", Set("gre"), "gre", ProvinceType.Land, true)
+    object GulfOfLyon extends Province("Gulf of Lyon", Set("lyo", "gol", "gulfofl", "lyon"), "lyo", ProvinceType.Sea, false)
+    object GulfOfBothnia extends Province("Gulf of Bothnia", Set("bot", "gob", "both", "gulfofb", "bothnia"), "bot", ProvinceType.Sea, false)
+    object HelgolandBight extends Province("Helgoland Bight", Set("hel", "helgoland"), "hel", ProvinceType.Sea, false)
+    object Holland extends Province("Holland", Set("hol"), "hol", ProvinceType.Land, true)
+    object IonianSea extends Province("Ionian Sea", Set("ion", "ionian"), "ion", ProvinceType.Sea, false)
+    object IrishSea extends Province("Irish Sea", Set("iri", "irish"), "iri", ProvinceType.Sea, false)
+    object Kiel extends Province("Kiel", Set("kie"), "kie", ProvinceType.Land, true)
+    object Liverpool extends Province("Liverpool", Set("lvp", "livp", "lpl"), "lvp", ProvinceType.Land, true)
+    object Livonia extends Province("Livonia", Set("lvn", "livo", "lvo", "lva"), "lvn", ProvinceType.Land, false)
+    object London extends Province("London", Set("lon"), "lon", ProvinceType.Land, true)
+    object Marseilles extends Province("Marseilles", Set("mar", "mars"), "mar", ProvinceType.Land, true)
+    object MidAtlanticOcean extends Province("Mid-Atlantic Ocean", Set("mao", "midatlanticocean", "midatlantic", "mid", "mat"), "mao", ProvinceType.Sea, false)
+    object Moscow extends Province("Moscow", Set("mos"), "mos", ProvinceType.Land, true)
+    object Munich extends Province("Munich", Set("mun"), "mun", ProvinceType.Land, true)
+    object Naples extends Province("Naples", Set("nap"), "nap", ProvinceType.Land, true)
+    object NorthAtlanticOcean extends Province("North Atlantic Ocean", Set("nao", "nat"), "nao", ProvinceType.Sea, false)
+    object NorthAfrica extends Province("North Africa", Set("naf", "nora"), "naf", ProvinceType.Land, false)
+    object NorthSea extends Province("North Sea", Set("nth", "norsea", "nts"), "nth", ProvinceType.Sea, false)
+    object Norway extends Province("Norway", Set("nor", "nwy", "norw"), "nor", ProvinceType.Land, true)
+    object NorwegianSea extends Province("Norwegian Sea", Set("nwg", "norwsea", "nrg", "norwegian"), "nwg", ProvinceType.Sea, false)
+    object Paris extends Province("Paris", Set("par"), "par", ProvinceType.Land, true)
+    object Picardy extends Province("Picardy", Set("pic"), "pic", ProvinceType.Land, false)
+    object Piedmont extends Province("Piedmont", Set("pie"), "pie", ProvinceType.Land, false)
+    object Portugal extends Province("Portugal", Set("por"), "por", ProvinceType.Land, true)
+    object Prussia extends Province("Prussia", Set("pru"), "pru", ProvinceType.Land, false)
+    object Rome extends Province("Rome", Set("rom"), "rom", ProvinceType.Land, true)
+    object Ruhr extends Province("Ruhr", Set("ruh"), "ruh", ProvinceType.Land, false)
+    object Rumania extends Province("Rumania", Set("rum"), "rum", ProvinceType.Land, true)
+    object Serbia extends Province("Serbia", Set("ser"), "ser", ProvinceType.Land, true)
+    object Sevastopol extends Province("Sevastopol", Set("sev", "sevastapol"), "sev", ProvinceType.Land, true)
+    object Silesia extends Province("Silesia", Set("sil"), "sil", ProvinceType.Land, false)
+    object Skagerrak extends Province("Skagerrak", Set("ska"), "ska", ProvinceType.Sea, false)
+    object Smyrna extends Province("Smyrna", Set("smy"), "smy", ProvinceType.Land, true)
+    object Spain extends Province("Spain", Set("spa"), "spa", ProvinceType.Land, true)
+    object StPetersburg extends Province("St Petersburg", Set("stp"), "stp", ProvinceType.Land, true)
+    object Sweden extends Province("Sweden", Set("swe"), "swe", ProvinceType.Land, true)
+    object Syria extends Province("Syria", Set("syr"), "syr", ProvinceType.Land, false)
+    object Trieste extends Province("Trieste", Set("tri"), "tri", ProvinceType.Land, true)
+    object Tunis extends Province("Tunis", Set("tun"), "tun", ProvinceType.Land, true)
+    object Tuscany extends Province("Tuscany", Set("tus"), "tus", ProvinceType.Land, false)
+    object Tyrolia extends Province("Tyrolia", Set("tyr", "tyl", "trl"), "tyr", ProvinceType.Land, false)
+    object TyrrhenianSea extends Province("Tyrrhenian Sea", Set("tys", "tyrr", "tyrrhenian", "tyn", "tyh"), "tys", ProvinceType.Sea, false)
+    object Ukraine extends Province("Ukraine", Set("ukr"), "ukr", ProvinceType.Land, false)
+    object Venice extends Province("Venice", Set("ven"), "ven", ProvinceType.Land, true)
+    object Vienna extends Province("Vienna", Set("vie"), "vie", ProvinceType.Land, true)
+    object Wales extends Province("Wales", Set("wal"), "wal", ProvinceType.Land, false)
+    object Warsaw extends Province("Warsaw", Set("war"), "war", ProvinceType.Land, true)
+    object WesternMediterranean extends Province("Western Mediterranean", Set("wes", "wmed", "west", "western", "westmed", "wms", "wme"), "wes", ProvinceType.Sea, false)
+    object Yorkshire extends Province("Yorkshire", Set("yor", "york", "yonkers"), "yor", ProvinceType.Land, false)
+  }
 }
